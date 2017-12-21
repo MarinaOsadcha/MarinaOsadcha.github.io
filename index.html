@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang='uk'>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Куп'янськ: Історії</title>
+		<link rel="stylesheet" href="main.css">
+			
+		<!--for icons-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+	</head>
+	
+	<body>
+		<div class='layout'>
+			<aside id='sidebar'> 
+				<i id='naviconMain' class="fa fa-navicon" style='font-size:40px' ></i>
+				<nav>
+					<a href='about.html'>про нас</a>
+					<a href='articles.html'>публікації</a>
+					<a href='gallery.html'>галерея</a>
+				</nav>
+			</aside>
+			
+			<div id='logo'>
+				<h1>Куп'янськ : Історії</h1>
+				<p>by Olexander Osadchy</p>
+			</div>
+			
+			<div id='mainPictureContainer'>
+				<img src='http://res.cloudinary.com/marinaos/image/upload/v1513772135/history/mainPicture.jpg' id='picture' alt='main picture of site Kupjansk History'>
+			</div>
+			
+			<footer>
+				<div class='copyrights'>
+					<p>&copy; 2017  Olexander Osadchy, author</p>
+					<p>&copy; 2017  Marina Osadcha, development</p>
+					<p>Копіювання та розміщення матеріалів без активної ссилки на сайт 'Куп'янськ : Історія' не допускається.</p>
+				</div>
+				<div class='socials'>
+					<a href='https://www.facebook.com/profile.php?id=100013243569502' target='_blank'><i  class='fa fa-facebook-official'></i></a>
+					<a href='https://www.instagram.com/oleksander.osadchy/' target='_blank'><i class='fa fa-instagram'></i></a>
+					<a href='https://twitter.com/OlexanderOs' target='_blank'><i class='fa fa-twitter-square'></i></a>
+					<p><a class='mailto' href='mailto:olexander.osadchy@gmail.com'>olexander.osadchy@gmail.com</a></p>
+				</div>
+			</footer>
+		</div>
+	
+		<script>
+			//animation for mainPicture of index page
+			//фото выравнивается по высоте, чтобы на всех девайсах было до футера. 
+			//футер ниже на 70рх, чтобы сильно не обрезало фото снизу
+			var container = document.getElementById('mainPictureContainer');
+			container.style.height = document.documentElement.clientHeight + 70 + 'px';    
+			var height = document.documentElement.clientHeight + 250;
+			var picture = document.getElementById('picture');
+			var position = height;
+						
+			var idPicture = setInterval(function toAnimatePicture() {
+				position = position - 0.3;
+				picture.style.height = position + 'px';
+								
+				if (height - position >= 150) {
+					clearInterval(idPicture);
+				}
+			},20);
+			
+			window.onload = function() {
+			
+				var naviconMain = document.getElementById('naviconMain');
+				var sidebar = document.getElementById('sidebar');
+				var logo = document.getElementById('logo');
+												
+				var positionA = -200;
+				var positionB = 200;
+				var count = 0;
+				var width = document.documentElement.clientWidth;
+				
+				logo.style.opacity = 1;
+				naviconMain.style.opacity = 1;
+				
+				
+				function toClickNavicon() {
+					count++;
+				var idNav = setInterval( function toAnimateNav() {
+					if (count % 2 != 0) {
+						positionA = positionA + 10;
+						sidebar.style.left = positionA + 'px';
+						
+						//if window width <= 985 && >= 590 
+						if (width <= 985 && width >= 590){  	//навикон двигает текст #logo, чтобы на него не наезжать
+							logo.style.paddingLeft = 210 + 'px';
+							logo.style.transition = 0.5 + 's';
+						}
+						
+						//if window width <= 590
+						if (width <= 590) {
+							logo.style.opacity = 0;
+							logo.style.transition = 0.1 + 's';
+						}
+					
+						if (positionA >= 0) {
+							positionA = -200;
+							clearInterval(idNav);
+						}
+					} 
+					if (count % 2 == 0) {
+						positionB = positionB - 10;
+						sidebar.style.left = positionB + 'px';
+						
+						if (width <= 985 && width >= 590) {		//вернуть текст #logo на место
+							logo.style.paddingLeft = 0 + 'px';
+							logo.style.transition = 1 + 's';
+						}
+						if (width <= 590) {
+						logo.style.transition = 1 + 's';
+							logo.style.opacity = 1;
+						}
+						
+						if (positionB <= -200) {
+							positionB = 200;
+							clearInterval(idNav);
+						}
+					}
+				}, 5);
+			};
+			naviconMain.onclick = toClickNavicon;
+		};
+		</script>
+	</body>
+</html>

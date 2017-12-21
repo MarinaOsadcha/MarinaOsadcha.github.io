@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang='uk'>
+	<head>
+		<meta charset='utf-8'>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Куп'янськ: Історії. Галерея</title>
+		<link rel="stylesheet" href="../main.css">
+		
+		<!--for icons-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+	</head>
+	
+	<body>
+		<aside id='sidebar'> 
+			<i id='navicon' class="fa fa-navicon" style='font-size:40px' ></i>
+			<nav>
+				<a href='../about.html'>про нас</a>
+				<a href='../articles.html'>публікації</a>
+				<a href='../gallery.html'>галерея</a>
+			</nav>
+		</aside>
+		
+		<div class='layout' id='moveLayout'>
+			<div id='wrapper'>
+				<header id='up'>
+					<div class='logoContainer'> 
+						<a href='../index.html' class='logoLink'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772113/history/logo.jpg' alt='logo' width='60' height='50'></a>
+						<nav>
+							<a href='../about.html'>про нас</a>
+							<a href='../articles.html'>публікації</a>
+							<a href='../gallery.html' class='active'>галерея</a>
+						</nav>
+						
+						<div class='headerSocials'>
+							<a href='https://www.facebook.com/profile.php?id=100013243569502' target='_blank'><i  class='fa fa-facebook-official'></i></a>
+							<a href='https://www.instagram.com/oleksander.osadchy/' target='_blank'><i class='fa fa-instagram'></i></a>
+							<a href='https://twitter.com/OlexanderOs' target='_blank'><i class='fa fa-twitter-square'></i></a>
+							<a href='mailto:olexander.osadchy@gmail.com'><i class='fa fa-envelope' style='font-size:24px;'></i></a>
+						</div>
+						
+						<a href='../index.html'><h1>Куп'янськ : Історії <span>by Olexander Osadchy</span></h1></a>
+					</div>
+				</header>
+			
+				<div class='container post'>
+					<div class='breadcrumbs'>
+						<ul>
+							<li> <a href='../index.html'>Головна <span> ></span></a></li>
+							<li> <a href='../gallery.html'>Галерея <span> ></span></a></li>
+							<li>Куп'янські дворики</li>
+						</ul>
+					</div>
+					
+					<div class='gallery' id='modalPicture'>
+						<div class='row'>
+							<div class='left'>
+								<img id='0' src='http://res.cloudinary.com/marinaos/image/upload/v1513772199/history/gallery/album1/album1_1.jpg' style='width:150%' class='slider_pic' alt='main photo of album 1'>
+							</div>
+							<div class='right'>
+								<img id='1' src='http://res.cloudinary.com/marinaos/image/upload/v1513772202/history/gallery/album1/album1_2.jpg' style='width:150%' class='slider_pic' alt='main photo of album 1'>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='left'>
+								<img id='2' src='http://res.cloudinary.com/marinaos/image/upload/v1513772207/history/gallery/album1/album1_3.jpg' class='slider_pic vertical' alt='main photo of album 1'>
+							</div>
+							<div class='right'>
+								<img id='3' src='http://res.cloudinary.com/marinaos/image/upload/v1513772208/history/gallery/album1/album1_4.jpg' class='slider_pic vertical' alt='main photo of album 1'>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='left'>
+								<img id='4' src='http://res.cloudinary.com/marinaos/image/upload/v1513772213/history/gallery/album1/album1_5.jpg' style='width:150%' class='slider_pic' alt='main photo of album 1'>
+							</div>
+							<div class='right'> 
+								<img id='5' src='http://res.cloudinary.com/marinaos/image/upload/v1513772214/history/gallery/album1/album1_6.jpg' class='slider_pic vertical' alt='main photo of album 1'>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='left'>
+								<img id='6' src='http://res.cloudinary.com/marinaos/image/upload/v1513772216/history/gallery/album1/album1_7.jpg' style='width:150%' class='slider_pic' alt='main photo of album 1'>
+							</div>
+							<div class='right'> 
+								<img id='7' src='http://res.cloudinary.com/marinaos/image/upload/v1513772218/history/gallery/album1/album1_8.jpg' style='width:150%' class='slider_pic' alt='main photo of album 1'>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='left'>
+								<img id='8' src='http://res.cloudinary.com/marinaos/image/upload/v1513772219/history/gallery/album1/album1_9.jpg' class='slider_pic vertical' alt='main photo of album 1'>
+							</div>
+							<div class='right'> 
+								<img id='9' src='http://res.cloudinary.com/marinaos/image/upload/v1513772221/history/gallery/album1/album1_10.jpg' style='width:150%' class='slider_pic' alt='main photo of album 1'>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='left'>
+								<img id='10' src='http://res.cloudinary.com/marinaos/image/upload/v1513772223/history/gallery/album1/album1_11.jpg' style='width:150%' class='slider_pic' alt='main photo of album 1'>
+							</div>
+							<div class='right'> 
+								<img id='11' src='http://res.cloudinary.com/marinaos/image/upload/v1513772225/history/gallery/album1/album1_12.jpg' style='width:150%' class='slider_pic' alt='main photo of album 1'>
+							</div>
+						</div>
+					</div>
+					
+					<div id='slider'>
+						<i class='close slider' onclick='toClosePicture()'>X</i>
+						<div class='sliderGallery'>
+							<div class='sliderPicture'>
+								<i id='back' class="fa fa-angle-left" style="font-size:65px"></i>
+								<ul id='galleryUl'>
+									<li id='00'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772199/history/gallery/album1/album1_1.jpg' alt='Площа Центральна, буд. 23, подвір’я БТІ.'></li>
+									<li id='01'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772202/history/gallery/album1/album1_2.jpg' alt='Будинок збудований щонайменше на початку ХХ сторіччя. Подейкують, що до 1917-го року тут був розташований постоялий двір, та підтвердити чи спростувати цю інформацію я наразі не можу.'></li>
+									<li id='02'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772207/history/gallery/album1/album1_3.jpg' alt='Сходи на другий поверх, що ведуть до приміщення БТІ, та інших контор а-ля «Рога і копита».'></li>
+									<li id='03'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772208/history/gallery/album1/album1_4.jpg' alt='Напевно таке саме фото можна було зробити й сто років тому…'></li>
+									<li id='04'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772213/history/gallery/album1/album1_5.jpg' alt='Дикий виноград, що приховує вплив років та биті шибки, і параболічні антени, як символ сьогодення.'></li>
+									<li id='05'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772214/history/gallery/album1/album1_6.jpg' alt='Площа Центральна, буд. 21 (подвір’я з боку магазину побутової техніки «ViKo»).'></li>
+									<li id='06'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772216/history/gallery/album1/album1_7.jpg' alt='Там же. Дерев’яна прибудова зі сходами, що ведуть на другий поверх, де розташовані декілька приватних помешкань. З’явилася за часів радянської влади, коли будинок був поділений на окремі квартири, і  забезпечує окремий доступ до кожної  з них.'></li>
+									<li id='07'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772218/history/gallery/album1/album1_8.jpg' alt='Вул. Сватівська, буд. 2. Перший поверх будівлі займають ветеринарна аптека та салон краси. Другий поверх пропонується в оренду.'></li>
+									<li id='08'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772219/history/gallery/album1/album1_9.jpg' alt='Вхід, що веде на другий поверх.'></li>
+									<li id='09'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772221/history/gallery/album1/album1_10.jpg' alt='Там же. Цегляна кладка взірця 90-х років ХІХ ст. (достеменно відомо, що будинок був збудований ще до 1902 року). '></li>
+									<li id='010'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772223/history/gallery/album1/album1_11.jpg' alt='Площа Центральна, буд. 27. Особисто для мене це подвір’я стало відкриттям, про його існування я дізнався випадково. Додаткових орієнтирів я не наводжу навмисно – здогадайтесь, де це?'></li>
+									<li id='011'><img src='http://res.cloudinary.com/marinaos/image/upload/v1513772225/history/gallery/album1/album1_12.jpg' alt='Там же. Ще донедавна тут були «комунальні» квартири. Зараз – це приватна власність. Зі слів господаря будівлі датою її зведення є 1900 рік.'></li>
+								</ul>
+								<i id='forward' class="fa fa-angle-right" style="font-size:65px"></i>
+							</div>
+							<div class='sliderContent' id='content'>
+								<p>Here there will be your comments about pics</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		
+			<footer>
+				<div class='copyrights'>
+					<p>&copy; 2017 Olexander Osadchy, author</p>
+					<p>&copy; 2017 Marina Osadcha, development</p>
+					<p>Копіювання та розміщення матеріалів без активної ссилки на сайт 'Куп'янськ : Історія' не допускається.</p>
+				</div>
+				<div class='socials'>
+					<a href='https://www.facebook.com/profile.php?id=100013243569502' target='_blank'><i  class='fa fa-facebook-official'></i></a>
+					<a href='https://www.instagram.com/oleksander.osadchy/' target='_blank'><i class='fa fa-instagram'></i></a>
+					<a href='https://twitter.com/OlexanderOs' target='_blank'><i class='fa fa-twitter-square'></i></a>
+					<p><a class='mailto' href='mailto:olexander.osadchy@gmail.com'>olexander.osadchy@gmail.com</a></p>
+				</div>
+			</footer>
+			<div id='arrowUp'>
+				<a href='#up'><i class="fa fa-angle-up" style='font-size:65px;'></i></a>
+			</div>
+		</div>
+				
+		<script src='../script.js'></script>
+	</body>
+</html>
