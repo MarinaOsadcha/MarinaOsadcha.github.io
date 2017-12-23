@@ -54,15 +54,15 @@
 			var height = document.documentElement.clientHeight + 250;
 			var picture = document.getElementById('picture');
 			var position = height;
-						
+			
 			var idPicture = setInterval(function toAnimatePicture() {
-				position = position - 0.3;
+				position = position - 0.5;
 				picture.style.height = position + 'px';
 								
 				if (height - position >= 150) {
 					clearInterval(idPicture);
 				}
-			},20);
+			},60);
 			
 			//navicon + sidebar
 			//window.onload = function() {
