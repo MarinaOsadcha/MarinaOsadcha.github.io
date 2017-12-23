@@ -22,6 +22,8 @@ window.onload = function() {
 	var moveLayout = document.getElementById('moveLayout');
 	var count = 0;
 	
+	moveLayout.style.transition = 0.5 + 's';
+	
 	if (navicon != null) {
 		navicon.style.color = 'rgb(88,77,57)'; //on this page navigon is grey
 		sidebar.style.background = 'rgba(250,250,250,1)';  //on this page sidebar is white

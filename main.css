@@ -19,7 +19,6 @@ a {text-decoration:none;}
 	padding-bottom:150px;
 	background:rgb(88,77,57);
 	color:rgba(250,250,250,1);
-	transition:0.5s;
 }
 	#wrapper {transition:0.5s; overflow:hidden;}
 	
@@ -153,7 +152,7 @@ a {text-decoration:none;}
 			display:inline-block;
 			width:51%;
 			height:100%;
-			padding:25px 10px 15px 10%;
+			padding:20px 10px 15px 10%;
 			border-right:1px solid rgb(240,240,240);
 			vertical-align:top;
 		}
@@ -163,6 +162,11 @@ a {text-decoration:none;}
 				font-size:12px;
 				letter-spacing:2px;
 				color: rgba(240,240,240,0.9);
+			}
+			p.copyrules {
+				margin:0;
+				padding-top:5px;
+				font-size:11px;
 			}
 		.socials {
 			display:inline-block;
@@ -444,22 +448,23 @@ a {text-decoration:none;}
 					display:inline-block;
 					width:47%;
 					margin-right:5%;
+					margin-top:10px;
 					vertical-align:top;
 				}
+				.col-left.float {float:left;margin-bottom:20px;margin-right:30px;margin-top:5px;}
+				.col-left.float img {margin-top:0!important;}
+				
 				.col-right {
 					position:relative;
 					display:inline-block;
 					width:47%;
+					margin-top:10px;
 					vertical-align:top;
 				}
 				article img {
 					transform:none!important;
 					margin-bottom:0!important;
 					width:100%;
-				}
-				.spisok {
-					position:relative;
-					padding-top:20%;
 				}
 				article .singlePicture {
 					position:relative;
@@ -468,10 +473,12 @@ a {text-decoration:none;}
 					margin-bottom:10px;
 				}
 				article ol {
-					padding: 0 0 0 10px;
-					margin-bottom:0;
+					padding: 0 0 0 20px;
+					margin-bottom:-10px;
 					margin-top:0;
+					margin-left:52%;
 				}
+				
 				article ul {
 					padding-left:60px;
 				}
@@ -703,7 +710,8 @@ i.fa:hover {
 @media only screen and (max-width:650px) {
 	.col-left {width:100%; margin-right:0;margin-top:16px; margin-bottom:16px;}
 	.col-right {width:100%; margin-top:16px; margin-bottom:16px;}
-	.spisok {padding-top:0;margin-bottom:0;padding-left:50px;}
+	article ol {margin-left:0;}
+	.col-left.float {float:none;margin-bottom:10px;margin-top:10px;}
 	.pictureTitle {padding-bottom:10px;}
 }
 @media only screen and (max-width:560px) {
