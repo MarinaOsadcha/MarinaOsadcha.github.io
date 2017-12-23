@@ -69,12 +69,12 @@
 			var sidebar = document.getElementById('sidebar');
 			var logo = document.getElementById('logo');
 			var count = 0;
-			var width = document.documentElement.clientWidth;
-				
+							
 			logo.style.opacity = 1;
 			naviconMain.style.opacity = 1;
 							
 			function toClickNavicon() {
+				var width = document.documentElement.clientWidth;
 				count++;
 				if (count % 2 != 0) {
 					sidebar.style.left = 0;
