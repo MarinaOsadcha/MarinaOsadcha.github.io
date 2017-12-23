@@ -65,67 +65,44 @@
 			},60);
 			
 			//navicon + sidebar
-			//window.onload = function() {
-			
-				var naviconMain = document.getElementById('naviconMain');
-				var sidebar = document.getElementById('sidebar');
-				var logo = document.getElementById('logo');
-												
-				var positionA = -200;
-				var positionB = 200;
-				var count = 0;
-				var width = document.documentElement.clientWidth;
+			var naviconMain = document.getElementById('naviconMain');
+			var sidebar = document.getElementById('sidebar');
+			var logo = document.getElementById('logo');
+			var count = 0;
+			var width = document.documentElement.clientWidth;
 				
-				logo.style.opacity = 1;
-				naviconMain.style.opacity = 1;
-				
-				
-				function toClickNavicon() {
-					count++;
-				var idNav = setInterval( function toAnimateNav() {
-					if (count % 2 != 0) {
-						positionA = positionA + 10;
-						sidebar.style.left = positionA + 'px';
-						
-						//if window width <= 985 && >= 590 
-						if (width <= 985 && width >= 590){  	//навикон двигает текст #logo, чтобы на него не наезжать
-							logo.style.paddingLeft = 210 + 'px';
-							logo.style.transition = 0.5 + 's';
-						}
-						
-						//if window width <= 590
-						if (width <= 590) {
-							logo.style.opacity = 0;
-							logo.style.transition = 0.1 + 's';
-						}
-					
-						if (positionA >= 0) {
-							positionA = -200;
-							clearInterval(idNav);
-						}
-					} 
-					if (count % 2 == 0) {
-						positionB = positionB - 10;
-						sidebar.style.left = positionB + 'px';
-						
-						if (width <= 985 && width >= 590) {		//вернуть текст #logo на место
-							logo.style.paddingLeft = 0 + 'px';
-							logo.style.transition = 1 + 's';
-						}
-						if (width <= 590) {
-						logo.style.transition = 1 + 's';
-							logo.style.opacity = 1;
-						}
-						
-						if (positionB <= -200) {
-							positionB = 200;
-							clearInterval(idNav);
-						}
+			logo.style.opacity = 1;
+			naviconMain.style.opacity = 1;
+							
+			function toClickNavicon() {
+				count++;
+				if (count % 2 != 0) {
+					sidebar.style.left = 0;
+					//if window width <= 985 && >= 590 
+					if (width <= 985 && width >= 590){  	//навикон двигает текст #logo, чтобы на него не наезжать
+						logo.style.paddingLeft = 210 + 'px';
+						logo.style.transition = 0.5 + 's';
 					}
-				}, 5);
+					//if window width <= 590
+					if (width <= 590) {
+						logo.style.opacity = 0;				//#logo opacity 0
+						logo.style.transition = 0.1 + 's';
+					}
+				} 
+				if (count % 2 == 0) {
+					sidebar.style.left = -200 + 'px';
+					if (width <= 985 && width >= 590) {		//вернуть текст #logo на место
+						logo.style.paddingLeft = 0 + 'px';
+						logo.style.transition = 1 + 's';
+					}
+					if (width <= 590) {
+						logo.style.transition = 1 + 's';
+						logo.style.opacity = 1;
+					}
+				}
 			};
 			naviconMain.onclick = toClickNavicon;
-		//};
+		
 		</script>
 	</body>
 </html>
