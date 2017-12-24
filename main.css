@@ -239,7 +239,7 @@ a {text-decoration:none;}
 .fillAside {
 	position:absolute;
 	display:inline-block;
-	top:134px;
+	top:149px;
 	right:40px;
 	width:26%;
 	color:rgba(88,77,57,0.9);
@@ -488,6 +488,7 @@ a {text-decoration:none;}
 					padding-top:10px;
 					margin-bottom:10px;
 				}
+				article .wherefrom {font-style:italic;font-size:13px;}
 				article ol {
 					padding: 0 0 0 20px;
 					margin-bottom:-10px;
