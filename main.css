@@ -489,6 +489,11 @@ a {text-decoration:none;}
 					margin-bottom:10px;
 				}
 				article .wherefrom {font-style:italic;font-size:13px;}
+				article p.whiteSpace {
+					padding-left:30px;
+					font-style:italic;
+				}
+				article p.whiteSpace.sign{margin-left:100px;margin-top:-10px;}
 				article ol {
 					padding: 0 0 0 20px;
 					margin-bottom:-10px;
@@ -497,8 +502,10 @@ a {text-decoration:none;}
 				}
 				
 				article ul {
-					padding-left:60px;
+					padding-left:30px;
+					list-style:none;
 				}
+				article ul li:before {content: '-';font-size:20px; padding-right:5px;}
 					article ol li, article ul li {
 						padding-bottom:10px;
 					}
