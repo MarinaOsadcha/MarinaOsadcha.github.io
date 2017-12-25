@@ -196,7 +196,7 @@ a {text-decoration:none;}
 		position:fixed;
 		width:65px;
 		height:65px;
-		bottom:160px;
+		bottom:20px;
 		right:2.4%;
 		background: rgba(240,240,240,0.3);
 		border-radius:5px;
@@ -708,14 +708,14 @@ i.fa:hover {
 	#arrowUp {display:none;opacity:0!important;}
 	#logo {margin-left:0;}
 	.post article {width:80%;}
+	.share42init {top:auto;right:auto;bottom:20px;left:5%;}
+	.share42init span a{margin-left:0px!important;margin-right:20px!important;}
 }
 @media only screen and (max-width:880px){   
 	header nav {display: none;}
 	.logoContainer .logoLink {margin-left:42%;}
 	.logoContainer h1 {text-align:center;}
 	#navicon {display:inline-block;opacity:1;}
-	.share42init {top:auto;right:auto;bottom:20px;left:5%;}
-	.share42init span a{margin-left:0px!important;margin-right:20px!important;}
 }
 @media only screen and (max-width:750px) {
 	.post article {width:90%; margin:auto;padding:0;padding-bottom:60px;}
