@@ -64,15 +64,16 @@ var slider = document.getElementById('slider');
 		var idLi;
 		
 	function toShowSlider(event) {
-		var target = event.target;
+        var target = event.target;
 		if (target.className == 'slider_pic' || target.className == 'slider_pic vertical') {
 			slider_count = +event.target.id;    //start from a linked pic 
 						
 			item = document.getElementById(slider_count);   //if pic is vertical - change it's width to 50%
-			idLi = '0' + slider_count;
+            idLi = '0' + slider_count;
+            var liElement = document.getElementById(idLi);
+
 			if (item.className == 'slider_pic vertical') {
-				var vertical = document.getElementById(idLi);
-				vertical.firstElementChild.style.width = 50 + '%';
+                liElement.firstElementChild.style.width = 50 + '%';
 			}
 			
 			if (slider_count == 0) { 
@@ -80,47 +81,59 @@ var slider = document.getElementById('slider');
 			} else {
 				galleryUl.style.marginLeft = -(pic_width*slider_count) + 'px';
 			}
-			content.lastElementChild.innerHTML = document.getElementById(idLi).lastElementChild.getAttribute('alt');
+            content.lastElementChild.innerHTML = liElement.lastElementChild.getAttribute('alt');
 			slider.style.display = 'block';
-			document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+
+            checkArrowButtons(liElement);
 		}
 	};
-	function toForward() {
+    function toForward() {
+        var liElement;
 		if (slider_count <=10) {	
 		//if pic is vertical - change it's width
 			slider_count = slider_count + 1;
 			item = document.getElementById(slider_count);
 			idLi = '0' + slider_count;
-			
+
+            liElement = document.getElementById(idLi);
+
 			if (item.className == 'slider_pic vertical') {
-				var vertical = document.getElementById(idLi);
-				vertical.firstElementChild.style.width = 50 + '%';
+                liElement.firstElementChild.style.width = 50 + '%';
 			}
 			//till the last pic of ul
 			galleryUl.style.marginLeft = -(pic_width*slider_count) + 'px';
-			content.lastElementChild.innerHTML = document.getElementById(idLi).lastElementChild.getAttribute('alt');
+			content.lastElementChild.innerHTML = liElement.lastElementChild.getAttribute('alt');
 		} else {
 			galleryUl.style.marginLeft = galleryUl.style.marginLeft;
-			content.lastElementChild.innerHTML = document.getElementById(idLi).lastElementChild.getAttribute('alt');
-		}
+			content.lastElementChild.innerHTML = liElement.lastElementChild.getAttribute('alt');
+        }
+
+        checkArrowButtons(liElement);
 	};
 	forward.onclick = toForward;
 			
-	function toBack() {
+    function toBack() {
+        var liElement;
 		if (slider_count == 0) {	//first pic, no back move
-			galleryUl.style.marginLeft = galleryUl.style.marginLeft;
-			content.lastElementChild.innerHTML = document.getElementById(idLi).lastElementChild.getAttribute('alt');
+            galleryUl.style.marginLeft = galleryUl.style.marginLeft;
+            liElement = document.getElementById(idLi);
+            content.lastElementChild.innerHTML = liElement.lastElementChild.getAttribute('alt');
 		} else {
 			slider_count = slider_count - 1;
 			item = document.getElementById(slider_count);
-			idLi = '0' + slider_count;
+            idLi = '0' + slider_count;
+
+            liElement = document.getElementById(idLi);
+
 			if (item.className == 'slider_pic vertical') {
-				var vertical = document.getElementById(idLi);
-				vertical.firstElementChild.style.width = 50 + '%';
+                liElement.firstElementChild.style.width = 50 + '%';
 			}
 			galleryUl.style.marginLeft = - (pic_width*slider_count) + 'px';
-			content.lastElementChild.innerHTML = document.getElementById(idLi).lastElementChild.getAttribute('alt');
-		}
+            content.lastElementChild.innerHTML = liElement.lastElementChild.getAttribute('alt');
+        }
+
+        checkArrowButtons(liElement);
 	};
 	back.onclick = toBack;
 	modalPicture.onclick = toShowSlider;
@@ -129,5 +142,12 @@ var slider = document.getElementById('slider');
 		slider_count = 0;
 		slider.style.display = 'none';
 		document.body.style.overflow = 'auto';
-	};
+    };
+
+    function checkArrowButtons(liElement) {
+        //hide back arrow button for the first slide
+        document.getElementById('back').style.display = liElement.previousElementSibling ? 'block' : 'none';
+        //hide forward arrow button for the last slide
+        document.getElementById('forward').style.display = liElement.nextElementSibling ? 'block' : 'none';
+    }
 }
