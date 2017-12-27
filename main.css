@@ -168,6 +168,9 @@ a {text-decoration:none;}
 				padding-top:5px;
 				font-size:11px;
 			}
+			p.copyrules a {
+				color: rgba(240,240,240,0.9);	
+			}			
 		.socials {
 			display:inline-block;
 			width:48%;
@@ -201,7 +204,8 @@ a {text-decoration:none;}
 		background: rgba(240,240,240,0.3);
 		border-radius:5px;
 		opacity:0;      /*for animation*/
-		transition:1s;
+        transition-duration: 1s;
+        transition-property: opacity, display;
 	}
 		#arrowUp a {
 			width:100%;
@@ -351,7 +355,7 @@ a {text-decoration:none;}
 		width:80%;
 		min-height:190px;
 		margin:80px auto;
-	}
+	}         
 		.mainArticles .row {
 			position:relative;
 			width:100%;
@@ -439,11 +443,15 @@ a {text-decoration:none;}
 				position:relative;
 				width:63%;
 				margin:0 20px 0 73px;
-				padding:0 30px 80px 0;
+				padding:0 40px 80px 0;
 			}
 				article p {
 					font-size:16px;
 					line-height:1.35;
+				}
+				article p a {
+					color: rgb(12,12,12);
+					font-style:italic;
 				}
 				article .date {
 					font-size:14px;
@@ -709,7 +717,7 @@ i.fa:hover {
 	#arrowUp {display:none;opacity:0!important;}
 	#logo {margin-left:0;}
 	.post article {width:80%;}
-	.share42init {top:auto;right:auto;bottom:20px;left:5%;}
+	.share42init {top:auto;right:auto;bottom:20px;left:73px;}
 	.share42init span a{margin-left:0px!important;margin-right:20px!important;}
 }
 @media only screen and (max-width:880px){   
@@ -720,6 +728,7 @@ i.fa:hover {
 }
 @media only screen and (max-width:750px) {
 	.post article {width:90%; margin:auto;padding:0;padding-bottom:60px;}
+	.share42init {left:5%;}
 	.container {width:90%;}
 		.copyrights {padding-left:5%;}
 		.socials {padding-right:5%;}
@@ -772,6 +781,7 @@ i.fa:hover {
 @media only screen and (max-width:1105px) {
 	#slider .sliderGallery {min-width:1100px;}
 	#slider {overflow:auto;}
+	header nav {padding-left:6%;}
 }
 @media only screen and (max-width:995px) {
 	.headerSocials {display:none;}

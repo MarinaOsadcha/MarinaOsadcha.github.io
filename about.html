@@ -8,8 +8,20 @@
 		
 		<!--for icons-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <style>        
+        /*workaround for the large screens. It's better to use flexbox layout instead*/
+        @media only screen and (min-width:1510px) {  
+            article {
+               min-height:1500px;
+            }
+        }
+        @media only screen and (min-width:1710px) {
+            article {
+                min-height: 1600px;
+            }
+        }
+    </style>
 	</head>
-	
 	<body>
 		<aside id='sidebar'> 
 			<i id='navicon' class="fa fa-navicon" style='font-size:40px' ></i>
@@ -49,7 +61,7 @@
 							<li> Про нас </li>
 						</ul>
 					</div>
-					<div class='fillAside'>
+					<div class='fillAside' style="float:right">
 						<div class='lastArticles'>
 							<h2>Останні статті</h2>
 							<a href='articles/article1.html'>
@@ -98,7 +110,7 @@
 				<div class='copyrights'>
 					<p>&copy; 2017 Olexander Osadchy, author</p>
 					<p>&copy; 2017 Marina Osadcha, developer</p>
-					<p class='copyrules'>Копіювання та розміщення матеріалів без активного посилання на сайт 'Куп'янськ: Історії' не допускається.</p>
+					<p class='copyrules'>Копіювання та розміщення матеріалів без активного посилання на сайт <a href='http://kupyansk.kh.ua'> 'Куп'янськ: Історії'</a> не допускається.</p>
 				</div>
 				<div class='socials'>
 					<a href='https://www.facebook.com/profile.php?id=100013243569502' target='_blank'><i  class='fa fa-facebook-official'></i></a>
