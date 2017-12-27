@@ -2,11 +2,18 @@
 //arrow UP
 var arrowUp = document.getElementById('arrowUp'); 
 var width = document.documentElement.clientWidth;
+var height = document.documentElement.clientHeight;
 	window.onscroll = function() {
 		var pageY = window.pageYOffset || document.documentElement.scrollTop;    //прокрутка вниз в пикселях
 		if (pageY > 200 && width >= 950) {
 			arrowUp.style.display = 'inline-block';
-			arrowUp.style.opacity = 1;
+            arrowUp.style.opacity = 1;
+            var footers = document.getElementsByTagName('footer');
+            if (footers && footers.length > 0) {
+                //prevent arrow button overlapping with footer
+                var diff = footers[0].getBoundingClientRect().bottom - height - footers[0].clientHeight;
+                arrowUp.style.marginBottom = (diff < 0 ? - diff : 0) + "px";
+            }
 		}
 		if (pageY < 200 || width <= 950) {
 			arrowUp.style.display = 'none';
