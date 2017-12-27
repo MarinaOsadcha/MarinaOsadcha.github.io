@@ -459,6 +459,9 @@ a {text-decoration:none;}
 					text-transform:uppercase;
 					letter-spacing:3px;
 				}
+				article h3 {
+					font-size:20px;
+				}
 				.col-left {
 					position:relative;
 					display:inline-block;
@@ -505,7 +508,6 @@ a {text-decoration:none;}
 					padding-left:30px;
 					list-style:none;
 				}
-				article ul li:before {content: '-';font-size:20px; padding-right:5px;}
 					article ol li, article ul li {
 						padding-bottom:10px;
 					}
@@ -700,7 +702,6 @@ i.fa-angle-right {
 i.fa:hover { 
 		color: rgba(250,250,250,0.9); 
 	}
-
 /*----------------------------------------*/					
 /*media adaptive*/
 @media only screen and (max-width:950px) {
