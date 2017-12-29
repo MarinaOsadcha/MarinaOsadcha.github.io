@@ -168,6 +168,9 @@ a {text-decoration:none;}
 				padding-top:5px;
 				font-size:11px;
 			}
+			p.copyrules a {
+				color: rgba(240,240,240,0.9);	
+			}			
 		.socials {
 			display:inline-block;
 			width:48%;
@@ -293,35 +296,39 @@ a {text-decoration:none;}
 /*1.headline*/
 	#logo {
 		position: absolute;
-		top:120px;
+		top:23px;
 		width:100%;
 		text-align:center;
 		text-transform:uppercase;
+		font-family:'book antiqua',arial;
 		z-index:2; 
 	}
 		#logo h1 {
+			padding-top:80px;
 			font-size:45px;
 			letter-spacing:4px;
 			font-weight:bold;
+			margin-bottom:15px;
 		}
 		#logo p {
-			font-size:18px;
-			letter-spacing:1px;
+			font-size:24px;
+			letter-spacing:3px;
+			text-transform:none;
+			margin-top:0;
 		}
 		#logo .fa-book {cursor:pointer;color:rgb(250,250,250);padding-top:35px;}
 		#logo img {
 			background:white;
 			position:relative;
-			width:70px;
-			height:60px;
-			padding: 5px 3px 5px 2px;
-			margin-top:25px;
+			width:45px;
+			height:35px;
 			border:1px solid rgba(88,77,57,0.5);
 			border-radius: 4px;
-			padding-top:5px;
-			padding-bottom:5px;
+			padding-top:2px;
+			padding-bottom:2px;
 			box-sizing:content-box;
-			background:rgb{250,250,250}
+			background:rgb(250,250,250);
+			opacity:0.9;
 		}
 			
 	#logo, #navicon, #naviconMain { /*animation*/
@@ -440,11 +447,15 @@ a {text-decoration:none;}
 				position:relative;
 				width:63%;
 				margin:0 20px 0 73px;
-				padding:0 30px 80px 0;
+				padding:0 40px 80px 0;
 			}
 				article p {
 					font-size:16px;
 					line-height:1.35;
+				}
+				article p a {
+					color: rgb(12,12,12);
+					font-style:italic;
 				}
 				article .date {
 					font-size:14px;
@@ -710,7 +721,7 @@ i.fa:hover {
 	#arrowUp {display:none;opacity:0!important;}
 	#logo {margin-left:0;}
 	.post article {width:80%;}
-	.share42init {top:auto;right:auto;bottom:20px;left:5%;}
+	.share42init {top:auto;right:auto;bottom:20px;left:73px;}
 	.share42init span a{margin-left:0px!important;margin-right:20px!important;}
 }
 @media only screen and (max-width:880px){   
@@ -721,6 +732,7 @@ i.fa:hover {
 }
 @media only screen and (max-width:750px) {
 	.post article {width:90%; margin:auto;padding:0;padding-bottom:60px;}
+	.share42init {left:5%;}
 	.container {width:90%;}
 		.copyrights {padding-left:5%;}
 		.socials {padding-right:5%;}
@@ -773,7 +785,18 @@ i.fa:hover {
 @media only screen and (max-width:1105px) {
 	#slider .sliderGallery {min-width:1100px;}
 	#slider {overflow:auto;}
+	header nav {padding-left:6%;}
 }
 @media only screen and (max-width:995px) {
 	.headerSocials {display:none;}
 }
+@media only screen and (min-width:1510px) {  
+            article {
+               min-height:1500px;
+            }
+        }
+        @media only screen and (min-width:1710px) {
+            article {
+                min-height: 1600px;
+            }
+        }
