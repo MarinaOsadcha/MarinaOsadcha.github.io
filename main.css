@@ -296,35 +296,39 @@ a {text-decoration:none;}
 /*1.headline*/
 	#logo {
 		position: absolute;
-		top:120px;
+		top:23px;
 		width:100%;
 		text-align:center;
 		text-transform:uppercase;
+		font-family:'book antiqua',arial;
 		z-index:2; 
 	}
 		#logo h1 {
+			padding-top:80px;
 			font-size:45px;
 			letter-spacing:4px;
 			font-weight:bold;
+			margin-bottom:15px;
 		}
 		#logo p {
-			font-size:18px;
-			letter-spacing:1px;
+			font-size:24px;
+			letter-spacing:3px;
+			text-transform:none;
+			margin-top:0;
 		}
 		#logo .fa-book {cursor:pointer;color:rgb(250,250,250);padding-top:35px;}
 		#logo img {
 			background:white;
 			position:relative;
-			width:70px;
-			height:60px;
-			padding: 5px 3px 5px 2px;
-			margin-top:25px;
+			width:45px;
+			height:35px;
 			border:1px solid rgba(88,77,57,0.5);
 			border-radius: 4px;
-			padding-top:5px;
-			padding-bottom:5px;
+			padding-top:2px;
+			padding-bottom:2px;
 			box-sizing:content-box;
-			background:rgb{250,250,250}
+			background:rgb(250,250,250);
+			opacity:0.9;
 		}
 			
 	#logo, #navicon, #naviconMain { /*animation*/
@@ -786,3 +790,13 @@ i.fa:hover {
 @media only screen and (max-width:995px) {
 	.headerSocials {display:none;}
 }
+@media only screen and (min-width:1510px) {  
+            article {
+               min-height:1500px;
+            }
+        }
+        @media only screen and (min-width:1710px) {
+            article {
+                min-height: 1600px;
+            }
+        }
